@@ -1,0 +1,28 @@
+@import "../../styles/vars";
+
+.button {
+  padding: 21px 35px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 19px;
+  text-align: center;
+  border: none;
+  background-color: $btn-blue;
+  color: $white;
+  cursor: pointer;
+  opacity: 1;
+  transition: opacity 0.2s ease;
+  &:hover {
+    opacity: 0.9;
+  }
+  &:active {
+    opacity: 0.7;
+  }
+}
+
+@media (max-width: $md) {
+  .button {
+    padding: 15px 20px;
+  }
+}

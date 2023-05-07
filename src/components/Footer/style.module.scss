@@ -1,0 +1,234 @@
+@import "../../styles/vars";
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  padding: 0 150px 20px 150px;
+  width: 100%;
+  color: $white;
+  &__main {
+    display: flex;
+    align-items: flex-start;
+    &_left {
+      & > ul {
+        columns: 1;
+        -webkit-columns: 1;
+        -moz-columns: 1;
+      }
+    }
+    &_heading {
+      margin: 0;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 0.875rem;
+      line-height: 17px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: $text-dark;
+    }
+    &_list {
+      margin: 20px 0 0 0;
+      padding: 0;
+      columns: 2;
+      -webkit-columns: 2;
+      -moz-columns: 2;
+      list-style: none;
+      &_element {
+        margin: 0;
+        padding: 0;
+        &:not(:first-child) {
+          margin-top: 10px;
+        }
+        & > a {
+          text-decoration: none;
+          color: $white;
+          transition: opacity 0.2s ease;
+          &:hover {
+            opacity: 0.9;
+          }
+          &:active {
+            opacity: 0.8;
+          }
+        }
+      }
+    }
+    &_middle {
+      margin-left: 98px;
+    }
+    &_right {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      margin-left: auto;
+      font-weight: 500;
+      font-size: 1rem;
+      line-height: 19px;
+      text-align: right;
+      &_number {
+        margin: 20px 0 0 0;
+        font-weight: 500;
+        font-size: 1rem;
+        line-height: 19px;
+        text-align: right;
+        text-decoration: none;
+        color: $white;
+        transition: opacity 0.2s ease;
+        &:hover {
+          opacity: 0.9;
+        }
+        &:active {
+          opacity: 0.8;
+        }
+      }
+      &_icons {
+        display: flex;
+        align-items: center;
+        margin: 20px 0 0 0;
+        column-gap: 10px;
+      }
+      &_text {
+        margin: 20px 0 0 0;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1rem;
+        line-height: 19px;
+      }
+    }
+    &_icon {
+      cursor: pointer;
+      transition: opacity 0.2s ease;
+      &:hover {
+        opacity: 0.9;
+      }
+      &:active {
+        opacity: 0.8;
+      }
+    }
+  }
+  &__bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin: 20px 0 0 0;
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.75rem;
+    line-height: 15px;
+    text-align: right;
+    &_trademark {
+      margin: 0;
+    }
+    &_link {
+      margin: 5px 0 0 0;
+      text-decoration: underline;
+      color: $white;
+      opacity: 1;
+      transition: opacity 0.2s ease;
+      &:hover {
+        opacity: 0.9;
+      }
+      &:active {
+        opacity: 0.8;
+      }
+    }
+  }
+}
+
+@media (max-width: $xxl) {
+  .footer {
+    padding: 0 80px 20px 80px;
+  }
+}
+
+@media (max-width: $xl) {
+  .footer {
+    padding: 0 40px 10px 40px;
+    &__main_middle {
+      margin-left: 40px;
+    }
+  }
+}
+
+@media (max-width: $lg) {
+  .footer {
+    padding: 0 15px 10px 15px;
+    &__main {
+      &_list {
+        columns: 1;
+        -webkit-columns: 1;
+        -moz-columns: 1;
+      }
+    }
+  }
+}
+
+@media (max-width: $md) {
+  .footer {
+    padding: 0 15px 10px 15px;
+    &__main {
+      flex-direction: column;
+      &_middle {
+        margin: 30px 0 0 0;
+      }
+      &_right {
+        align-items: flex-start;
+        margin: 30px 0 0 0;
+      }
+    }
+  }
+}
+
+@media (max-width: $sm) {
+  .footer {
+    position: relative;
+    padding: 35px 15px 60px 15px;
+    &__main {
+      &_left {
+        & > ul {
+          columns: 1;
+          -webkit-columns: 1;
+          -moz-columns: 1;
+          & > li:first-child {
+            max-width: none;
+          }
+        }
+      }
+      &_heading {
+        font-size: 0.75rem;
+        line-height: 15px;
+      }
+      &_list {
+        columns: 2;
+        -webkit-columns: 2;
+        -moz-columns: 2;
+        &_element {
+          margin: 0;
+          padding: 0;
+          max-width: 123px;
+          font-weight: 400;
+          font-size: 0.875rem;
+          line-height: 17px;
+        }
+      }
+      &_right {
+        &_icons {
+          margin: 8px 0 0 0;
+        }
+        &_text {
+          margin: 10px 0 0 0;
+          font-size: 0.875rem;
+          line-height: 17px;
+        }
+      }
+      &_icon {
+        width: 24px;
+        height: 24px;
+      }
+    }
+    &__bottom {
+      align-items: flex-start;
+      margin: 50px 0 0 0;
+    }
+  }
+}

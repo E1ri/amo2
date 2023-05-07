@@ -1,0 +1,133 @@
+@import "../../styles/vars";
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  color: $white;
+  width: 100%;
+  &__logo {
+    width: 165px;
+    transition: opacity 0.2s ease;
+    cursor: pointer;
+    &:hover {
+      opacity: 0.9;
+    }
+    &:active {
+      opacity: 0.8;
+    }
+  }
+  &__menu {
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+    margin: 0 0 0 27px;
+    padding: 0;
+    list-style: none;
+    &_el {
+      margin: 0;
+      padding: 0;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 1rem;
+      line-height: 19px;
+      & > a {
+        text-decoration: none;
+        color: $white;
+        transition: opacity 0.2s ease;
+        &:hover {
+          opacity: 0.9;
+        }
+        &:active {
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+  &__phone {
+    margin-left: auto;
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 19px;
+    color: $white;
+    transition: opacity 0.2s ease;
+    &:hover {
+      opacity: 0.9;
+    }
+    &:active {
+      opacity: 0.8;
+    }
+  }
+  &__icons_block {
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+    margin-left: 47px;
+  }
+  &__icon {
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+    &:hover {
+      opacity: 0.9;
+    }
+    &:active {
+      opacity: 0.8;
+    }
+  }
+}
+
+@media (max-width: $xl) {
+  .header {
+    &__logo {
+      display: none;
+    }
+    &__menu {
+      margin: 0;
+    }
+  }
+}
+
+@media (max-width: $lg) {
+  .header {
+    &__icons_block {
+      column-gap: 10px;
+      margin-left: 20px;
+    }
+  }
+}
+
+@media (max-width: $md) {
+  .header {
+    &__phone {
+      display: none;
+    }
+    &__icons_block {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: $sm) {
+  .header {
+    position: fixed;
+    padding: 20px 15px;
+    top: 0;
+    background-color: $bg;
+    &__menu {
+      column-gap: 0;
+      width: 100%;
+      justify-content: space-between;
+      &_el {
+        margin: 0;
+        padding: 0;
+        font-size: 0.75rem;
+        line-height: 15px;
+        text-transform: uppercase;
+        &:last-child {
+          display: none;
+        }
+      }
+    }
+  }
+}
